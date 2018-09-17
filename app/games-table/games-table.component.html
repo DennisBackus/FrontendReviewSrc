@@ -1,12 +1,18 @@
+<input type="text" [(ngModel)]="game_title" name="game_title">
+<button (click)="findGame(game_title)">Search database</button>
+<br/> {{game}}
+{{gameTitleDTO.message}}
+
 <table>
   <tr>
     <th>Game Title</th>
     <th>Release date</th>
     <th>Game Studio</th>
   </tr>
-  <tr *ngFor="let game of games">
-    <td>{{game.game_title}}</td>
-    <td>{{game.release_date}}</td>
-    <td>{{game.game_studio}}</td>
+  <tr *ngFor="let game of gameTitleDTO.foundGames">
+    <td>{{game.gameTitle}}</td>
+    <td>{{game.releaseDate}}</td>
+    <td>{{game.gameStudio}}</td>
   </tr>
 </table>
+
