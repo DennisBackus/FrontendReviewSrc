@@ -23,8 +23,10 @@ export class GamesTableComponent implements OnInit {
     this.service.findGame(title).subscribe(
       data => {
       this.gameTitleDTO = data;},
-      err => console.error('Observer got an error: ' + err),
-      () => this.loading = false
+      err => this.loading = false  ,
+      () => 
+        this.loading = false  
+       
       );
 
 
