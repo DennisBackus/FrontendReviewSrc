@@ -1,9 +1,16 @@
+
+<div [hidden]="!loading">
+  <img heigth= '400' width = '400' src='../../assets/gif-transparent-loading-4.gif'>
+
+</div>
+<br/>
 <input type="text" [(ngModel)]="game_title" name="game_title">
 <button (click)="findGame(game_title)">Search database</button> 
-<br/> {{game}}
+
 {{gameTitleDTO.message}}
 <br/>
-{{loading}}
+
+
 
 
 <table>
