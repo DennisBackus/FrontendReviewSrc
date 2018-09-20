@@ -2,17 +2,26 @@
 <button (click)="findGame(game_title)">Search database</button> 
 <br/> {{game}}
 {{gameTitleDTO.message}}
+<br/>
+{{loading}}
+
 
 <table>
   <tr>
     <th>Game Title</th>
     <th>Release date</th>
     <th>Game Studio</th>
+    <th>average Score</th>
+    <th>highest Score</th>
+    <th>lowest Score</th>
   </tr>
   <tr *ngFor="let game of gameTitleDTO.foundGames">
     <td>{{game.gameTitle}}</td>
     <td>{{game.releaseDate}}</td>
     <td>{{game.gameStudio}}</td>
+    <td>{{game.avgScore}}</td>
+    <td>{{game.topScore}}</td>
+    <td>{{game.lowestScore}}</td>
   </tr>
 </table>
 
