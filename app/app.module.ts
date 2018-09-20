@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GameService } from '../service/game.service';
 import { GamesTableComponent } from './games-table/games-table.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GamesTableComponent
+    GamesTableComponent,
+    HeroDetailComponent
   ],
   imports: [
     FormsModule,
