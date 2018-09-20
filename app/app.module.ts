@@ -7,12 +7,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { GameService } from '../service/game.service';
 import { PersonTableComponent } from './person-table/person-table.component';
 import { GamesTableComponent } from './games-table/games-table.component';
-import {PersonService } from '../service/person.service';
 import { DannytestComponent } from './dannytest/dannytest.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    GamesTableComponent,
+
     PersonTableComponent,
     GamesTableComponent,
     DannytestComponent
@@ -24,7 +26,7 @@ import { DannytestComponent } from './dannytest/dannytest.component';
   ],
   providers: [
     GameService,
-    PersonService
+
   ],
   bootstrap: [AppComponent]
 })
