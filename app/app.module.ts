@@ -8,6 +8,7 @@ import { GameService } from '../service/game.service';
 import { PersonTableComponent } from './person-table/person-table.component';
 import { GamesTableComponent } from './games-table/games-table.component';
 import { DannytestComponent } from './dannytest/dannytest.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DannytestComponent } from './dannytest/dannytest.component';
 
     PersonTableComponent,
     GamesTableComponent,
-    DannytestComponent
+    DannytestComponent,
+    LoadingComponent
   ],
   imports: [
     FormsModule,
