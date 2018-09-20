@@ -12,15 +12,23 @@ export class GamesTableComponent implements OnInit {
 
   constructor(private service: GameService) { }
   banaan: string;
+  loading: string;
   gameTitleDTO: gameTitleDTO = new gameTitleDTO;
   ngOnInit() {
   }
 
   findGame(title : string){
+    this.loading = 'isloading';
     this.service.findGame(title).subscribe(data => {
       this.gameTitleDTO = data;
     });
 
+
+    if (this.gameTitleDTO.success == true) {
+      this.loading = 'done!';
+    }
+    
+    
     
   }
 
