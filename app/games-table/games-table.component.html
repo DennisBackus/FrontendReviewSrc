@@ -22,7 +22,8 @@
     <th>highest Score</th>
     <th>lowest Score</th>
   </tr>
-  <tr *ngFor="let game of gameTitleDTO.foundGames">
+  <tr *ngFor="let game of gameTitleDTO.foundGames"
+  (click)="onSelect(game)">
     <td>{{game.gameTitle}}</td>
     <td>{{game.releaseDate}}</td>
     <td>{{game.gameStudio}}</td>
@@ -33,3 +34,6 @@
 </table>
 
 </div>
+<br />
+<app-review-table [game] = "selectedGame"></app-review-table>
+
