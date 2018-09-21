@@ -13,14 +13,16 @@
 <br/>
 
 <div style="text-align:center">
-<table>
+<table class='game'>
   <tr>
+    
     <th>Game Title</th>
     <th>Release date</th>
     <th>Game Studio</th>
     <th>average Score</th>
     <th>highest Score</th>
     <th>lowest Score</th>
+  
   </tr>
   <tr *ngFor="let game of gameTitleDTO.foundGames"
   (click)="onSelect(game)">
@@ -35,5 +37,5 @@
 
 </div>
 <br />
-<app-review-table [game] = "selectedGame"></app-review-table>
+<app-review-table [game] = "selectedGame" [hidden] = "hidden"></app-review-table>
 

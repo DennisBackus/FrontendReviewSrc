@@ -13,13 +13,14 @@ export class GamesTableComponent implements OnInit {
   constructor(private service: GameService) { }
   banaan: string;
   loading: boolean;
+  hidden: boolean;
   gameTitleDTO: gameTitleDTO = new gameTitleDTO;
   ngOnInit() {
   }
 
   findGame(title : string){
     this.loading = true;
-
+    this.hidden = true;
     this.service.findGame(title).subscribe(
       data => {
       this.gameTitleDTO = data;},
@@ -34,6 +35,7 @@ export class GamesTableComponent implements OnInit {
 
 onSelect(game: GameDTO): void {
   this.selectedGame = game;
+  this.hidden = false;
 }
 test(){
   this.banaan = "dit is nu een bananenstring";
