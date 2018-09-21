@@ -1,13 +1,13 @@
 <div *ngIf="game">
 
-    <table>
+    <table class="review">
       <tr>
         <th>Website Name</th>
         <th>Review Score</th>
       </tr>
       <tr *ngFor="let review of game.reviews" [hidden]="review.reviewScore === 0">
-        <th><a href={{review.url}}>{{review.websiteName}}</a></th>
-        <th>{{review.reviewScore}}</th>
+        <td><a href={{review.url}}>{{review.websiteName}}</a></td>
+        <td>{{review.reviewScore}}</td>
     
       </tr>
     </table>

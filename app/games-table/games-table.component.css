@@ -1,4 +1,4 @@
-table {
+/* table {
     margin-left:auto; 
     margin-right:auto;
     font-family: arial, sans-serif;
@@ -14,4 +14,50 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
-}
+} */
+
+table.game {
+    font-family: Georgia, serif;
+    border: 6px solid #000000;
+    background-color: #D4EED1;
+    width: 100%;
+    text-align: center;
+  }
+  table.game td, table.game th {
+    border: 1px solid #218735;
+    padding: 3px 2px;
+  }
+  table.game tbody td {
+    font-size: 13px;
+  }
+  table.game th {
+    background: #010502;
+    background: -moz-linear-gradient(top, #404341 0%, #1a1e1b 66%, #010502 100%);
+    background: -webkit-linear-gradient(top, #404341 0%, #1a1e1b 66%, #010502 100%);
+    background: linear-gradient(to bottom, #404341 0%, #1a1e1b 66%, #010502 100%);
+    border-bottom: 0px solid #444444;
+  }
+  table.game th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #F0F0F0;
+    text-align: left;
+    border-left: 2px solid #24943A;
+  }
+  table.game th:first-child {
+    border-left: none;
+  }
+  
+  table.game tfoot td {
+    font-size: 13px;
+  }
+  table.game tfoot .links {
+    text-align: right;
+  }
+  table.game tfoot .links a{
+    display: inline-block;
+    background: #FFFFFF;
+    color: #24943A;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
