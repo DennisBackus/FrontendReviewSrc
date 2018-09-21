@@ -28,14 +28,13 @@ export class GamesTableComponent implements OnInit {
         this.loading = false  
        
       );
+ }
 
+ selectedGame: GameDTO;
 
-
-    
-    
-    
-  }
-
+onSelect(game: GameDTO): void {
+  this.selectedGame = game;
+}
 test(){
   this.banaan = "dit is nu een bananenstring";
 }
