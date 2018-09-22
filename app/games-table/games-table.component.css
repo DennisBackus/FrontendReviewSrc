@@ -16,10 +16,21 @@ tr:nth-child(even) {
     background-color: #dddddd;
 } */
 
+
+
+.loading{
+    
+    filter: invert(100%);
+}
+
+.searchbar{
+    position: center;
+}
 table.game {
     font-family: Georgia, serif;
     border: 6px solid #000000;
-    background-color: #D4EED1;
+    background-color: #000000;
+    color: white;
     width: 100%;
     text-align: center;
   }
@@ -41,7 +52,7 @@ table.game {
     font-size: 19px;
     font-weight: bold;
     color: #F0F0F0;
-    text-align: left;
+    text-align: center;
     border-left: 2px solid #24943A;
   }
   table.game th:first-child {

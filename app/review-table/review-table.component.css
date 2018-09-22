@@ -18,7 +18,8 @@ tr:nth-child(even) {
 table.review {
     font-family: Georgia, serif;
     border: 6px solid #000000;
-    background-color: #D4EED1;
+    background-color: black;
+    color: white;
     width: 100%;
     text-align: center;
   }
@@ -40,7 +41,7 @@ table.review {
     font-size: 19px;
     font-weight: bold;
     color: #F0F0F0;
-    text-align: left;
+    text-align: center;
     border-left: 2px solid #24943A;
   }
   table.review th:first-child {
@@ -49,6 +50,9 @@ table.review {
   
   table.review tfoot td {
     font-size: 13px;
+  }
+  table.review a{
+    color: white;
   }
   table.review tfoot .links {
     text-align: right;
