@@ -1,0 +1,10 @@
+.gamereview{
+    filter: invert(100%);
+    width: 400px;
+    height: 200px;
+    position: center;
+}
+body{
+    background-color:#000000;
+    
+    }

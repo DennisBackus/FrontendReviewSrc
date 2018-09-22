@@ -1,18 +1,16 @@
 
-<div [hidden]="!loading">
-  <img heigth= '400' width = '400' src='../../assets/gif-transparent-loading-4.gif'>
-
+<div class = "container" [hidden]="!loading">
+  <img class = "loading" heigth= '100' width = '100' src='../../assets/loading.gif'>
+  <p class="loadingtext" style="color:white">Loading might take some time if the game is not yet in our database.</p>
 </div>
 <br/>
-<input type="text" [(ngModel)]="game_title" name="game_title">
-<button (click)="findGame(game_title)">Search database</button> 
+<div class = "searchbar">
+<input type="text" [(ngModel)]="game_title" name="game_title"> <br/> <button (click)="findGame(game_title)">Search database</button> 
 
-{{gameTitleDTO.message}}
+<p style="color:white" [hidden]="loading">{{gameTitleDTO.message}}</p>
 <br/>
 
-<br/>
 
-<div style="text-align:center">
 <table class='game'>
   <tr>
     
