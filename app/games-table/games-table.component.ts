@@ -31,6 +31,21 @@ export class GamesTableComponent implements OnInit {
       );
  }
 
+  findAllGames(){
+    this.loading =true;
+    this.hidden = true;
+    this.service.findGames().subscribe(
+      data => {
+        this.gameTitleDTO = data;},
+        err => this.loading = false  ,
+        () => 
+          this.loading = false  
+         
+
+
+    );
+
+  }
  selectedGame: GameDTO;
 
 onSelect(game: GameDTO): void {
