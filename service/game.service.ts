@@ -18,8 +18,8 @@ export class GameService {
     return this.http.get<gameTitleDTO>('http://localhost:9090/game/scrape/' +title);
   }
 
-  findGames(): Observable<GameDTO[]> {
-    return this.http.get<GameDTO[]>('http://localhost:9090/game/all');
+  findGames(): Observable<gameTitleDTO> {
+    return this.http.get<gameTitleDTO>('http://localhost:9090/game/all');
   }
 
 }
