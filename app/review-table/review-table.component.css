@@ -15,7 +15,7 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 } */
-table.review {
+table.sortable {
     font-family: Georgia, serif;
     border: 6px solid #000000;
     background-color: black;
@@ -23,41 +23,41 @@ table.review {
     width: 100%;
     text-align: center;
   }
-  table.review td, table.review th {
+  table.sortable td, table.sortable th {
     border: 1px solid #218735;
     padding: 3px 2px;
   }
-  table.review tbody td {
+  table.sortable tbody td {
     font-size: 13px;
   }
-  table.review th {
+  table.sortable th {
     background: #010502;
     background: -moz-linear-gradient(top, #404341 0%, #1a1e1b 66%, #010502 100%);
     background: -webkit-linear-gradient(top, #404341 0%, #1a1e1b 66%, #010502 100%);
     background: linear-gradient(to bottom, #404341 0%, #1a1e1b 66%, #010502 100%);
     border-bottom: 0px solid #444444;
   }
-  table.review th {
+  table.sortable th {
     font-size: 19px;
     font-weight: bold;
     color: #F0F0F0;
     text-align: center;
     border-left: 2px solid #24943A;
   }
-  table.review th:first-child {
+  table.sortable th:first-child {
     border-left: none;
   }
   
-  table.review tfoot td {
+  table.sortable tfoot td {
     font-size: 13px;
   }
-  table.review a{
+  table.sortable a{
     color: white;
   }
-  table.review tfoot .links {
+  table.sortable tfoot .links {
     text-align: right;
   }
-  table.review tfoot .links a{
+  table.sortable tfoot .links a{
     display: inline-block;
     background: #FFFFFF;
     color: #24943A;

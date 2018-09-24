@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<i class="fa fa-chevron-up" *ngIf="sortDirection === 'asc'" ></i>
+<i class="fa fa-chevron-down" *ngIf="sortDirection === 'desc'"></i>
 
 <div class = "container" [hidden]="!loading">
   <img class = "loading" heigth= '100' width = '100' src='../../assets/loading.gif'>
@@ -10,20 +13,20 @@
 <p style="color:white" [hidden]="loading">{{gameTitleDTO.message}}</p>
 <br/>
 
+<button (click)="jojo()"></button>
+<table class='sortable' sortable-table (sorted)="onSorted($event)">
 
-<table class='game'>
   <tr>
     
-    <th>Game Title</th>
-    <th>Release date</th>
-    <th>Game Studio</th>
-    <th>average Score</th>
-    <th>highest Score</th>
-    <th>lowest Score</th>
+    <th sortable-column="gameTitle" sort-direction="asc" (click)="onSorted('gameTitle')">Game Title</th>
+    <th sortable-column="releaseDate" (click)="onSorted('releaseDate')">Release date</th>
+    <th sortable-column="gameStudio" (click)="onSorted('gameStudio')">Game Studio</th>
+    <th sortable-column="avgScore" (click)="onSorted('avgScore')">average Score</th>
+    <th sortable-column="topScore" (click)="onSorted('topScore')">highest Score</th>
+    <th sortable-column="lowestScore" (click)="onSorted('lowestScore')">lowest Score</th>
   
   </tr>
-  <tr *ngFor="let game of gameTitleDTO.foundGames"
-  (click)="onSelect(game)">
+  <tr *ngFor="let game of gameTitleDTO.foundGames" (click)="onSelect(game)">
     <td>{{game.gameTitle}}</td>
     <td>{{game.releaseDate}}</td>
     <td>{{game.gameStudio}}</td>
