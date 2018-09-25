@@ -7,13 +7,23 @@
   <p class="loadingtext" style="color:white">Loading might take some time if the game is not yet in our database.</p>
 </div>
 <br/>
+
 <div class = "searchbar">
-<input type="text" placeholder="Choose a game" [(ngModel)]="game_title" name="game_title"> <br/> <button (click)="findGame(game_title)">Search database</button> <button (click)="findAllGames()">Show all games in database</button>
+  <mat-form-field style="width:500px !important">
+<input type="text" placeholder="Choose a game" matInput [formControl]="gametitle" [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin" style="color:antiquewhite" name="gametitle" (input)="getTitles($event.target.value)">
+  </mat-form-field>
+  <mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let title of suggestTitleDTO.titles" [value] = "titles">
+  {{title}}
+</mat-option>
+
+  </mat-autocomplete>
+
+
+<br/> <button mat-raised-button (click)="findGame(gametitle.value)">Search database</button> \t <button mat-raised-button (click)="findAllGames()">Show all games in database</button>
 
 <p style="color:white" [hidden]="loading">{{gameTitleDTO.message}}</p>
 <br/>
-
-<button (click)="jojo()"></button>
 <table class='sortable' sortable-table (sorted)="onSorted($event)">
 
   <tr>

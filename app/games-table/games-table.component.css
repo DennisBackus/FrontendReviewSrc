@@ -25,7 +25,9 @@ tr:nth-child(even) {
 
 .searchbar{
     position: center;
+  
 }
+
 table.sortable {
     font-family: Georgia, serif;
     border: 6px solid #000000;

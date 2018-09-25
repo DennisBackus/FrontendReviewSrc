@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { GameService } from 'src/service/game.service';
 import { GameDTO } from '../../model/GameDTO';
 import { gameTitleDTO } from 'src/model/gameTitleDTO';
 import { SortService } from '../sort.service';
+import { suggestTitleDTO } from '../../model/suggestTitleDTO';
 
 
 @Component({
@@ -14,10 +16,11 @@ export class GamesTableComponent implements OnInit {
 
   constructor(private service: GameService,  private sortService: SortService ) { }
 
-  banaan: string;
+  gametitle = new FormControl('');
   loading: boolean;
   hidden: boolean;
   gameTitleDTO: gameTitleDTO = new gameTitleDTO;
+  suggestTitleDTO: suggestTitleDTO = new suggestTitleDTO;
   sortVar: number;
   sortDirection: string;
 
@@ -52,6 +55,14 @@ export class GamesTableComponent implements OnInit {
 
     );
 
+  }
+  getTitles(inputS: string){
+    this.service.getTitles(inputS).subscribe(
+      data => { this.suggestTitleDTO =data;
+
+      }
+    );
+  
   }
  selectedGame: GameDTO;
 
@@ -167,8 +178,4 @@ else if(choice == 'lowestScore'){
 
 }
 
-test(){
-
-  this.banaan = "dit is nu een bananenstring";
-}
 }
