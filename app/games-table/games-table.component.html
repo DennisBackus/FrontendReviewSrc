@@ -13,7 +13,7 @@
 <input type="text" placeholder="Choose a game" matInput [formControl]="gametitle" [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin" style="color:antiquewhite" name="gametitle" (input)="getTitles($event.target.value)">
   </mat-form-field>
   <mat-autocomplete #auto="matAutocomplete">
-<mat-option *ngFor="let title of suggestTitleDTO.titles" [value] = "titles">
+<mat-option *ngFor="let title of suggestTitleDTO.titles" [value] = "title">
   {{title}}
 </mat-option>
 
